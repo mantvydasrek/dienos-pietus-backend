@@ -7,7 +7,7 @@ const db = require('./database');
 const { authenticateToken, isAdmin, SECRET_KEY } = require('./middleware');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
